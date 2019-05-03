@@ -1,68 +1,79 @@
-## Slide Template
+## Cocoda Mapping Tool
 
-A scaffolding for a presentation based on [reveal.js](https://revealjs.com/), made by [stefandesu](https://github.com/stefandesu).
+European DDC Users Group 2019
 
-[Fork me on GitHub!](https://github.com/stefandesu/slide-template)
+Stockholm
 
----
+10 May 2019
 
-## HELLO THERE
+Stefan Peters
 
-reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-
----
-
-## POINT OF VIEW
-
-Press ESC to enter the slide overview.
-
-Hold down the alt key (ctrl in Linux) and click on any element to zoom towards it using [zoom.js](http://lab.hakim.se/zoom-js). Click again to zoom back out.
+https://exo.pm/edug2019/slides.pdf
 
 ---
 
-## TOUCH OPTIMIZED
+## What is Cocoda?
 
-Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-
----
-
-## Markdown
-
-slide-template uses a single Markdown file `slides.md` as the basis of the presentation. Slides are divided by an empty line, `---` on a seperate line, and another empty line (see this file as an example).
+Cocoda is a web-based tool for semi-automatic creation of mappings between different vocabularies.
 
 ---
 
-## Install and Build
+## Background
 
-Run `npm install` and then `npm run build` to get a folder `dist` which contains reveal.js, a `index.html` file with your presentation, and a `slides.pdf` file as a PDF download. The PDF is created using [decktape](https://github.com/astefanutti/decktape).
-
----
-
-## PRETTY CODE
-
-```javascript
-import React, { useState } from 'react';
-
-function Example() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
-```
-
-Code syntax highlighting courtesy of [highlight.js](http://softwaremaniacs.org/soft/highlight/en/description/).
+- Developed by the GBV Head Office (VZG) in Göttingen, Germany.
+- Part of Project coli-conc: https://coli-conc.gbv.de
+- The mapping tool and its background services are available as open source repositories on GitHub.
+- The data is openly available through APIs.
 
 ---
 
-## TODO
+## Data Sources
 
-- Add live server.
-- Add more example slides.
-- Add more explanations.
+- Data sources use the JSKOS format (SKOS in JSON-LD, https://gbv.github.io/jskos/).
+- In Cocoda, different sources are configurable for
+  - vocabularies
+  - concepts
+  - existing mappings
+  - mapping recommendations
+
+<!-- show services on website here -->
+
+---
+
+## Multilanguage Support
+
+- Cocoda has support for multiple interface languages, currently English and German.
+- New languages can be added easily.
+- Supports vocabulary data in multiple languages, e.g. Wikidata.
+  - Currently, most of the available vocabularies in Cocoda are in German.
+
+---
+
+## Mappings
+
+- Project coli-conc collected existing concordances with around 385,000 mappings.
+- Additionally, mapping data from Wikidata is available (another ~? mappings).
+- First use in production by Project KENOM (https://www.kenom.de):
+  - Mapping of local systems to GND, Wikidata, Nomisma, and others.
+  - 31,841 mappings created since November 2018.
+
+---
+
+## Data Conversion
+
+- Add your own data, etc.
+
+---
+
+## Live Demo
+
+https://coli-conc.gbv.de/cocoda/app/
+
+---
+
+## More Information
+
+- This presentation: https://exo.pm/edug2019/
+- Project homepage: https://coli-conc.gbv.de
+- GitHub repository for Cocoda: https://github.com/gbv/cocoda
+- Cocoda documentation and manual: https://gbv.github.io/cocoda/
