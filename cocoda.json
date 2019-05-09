@@ -1,0 +1,122 @@
+{
+  "registries": [
+    {
+      "uri": "http://coli-conc.gbv.de/registry/coli-conc-concepts",
+      "notation": ["J"],
+      "prefLabel": {
+        "en": "JSKOS Server"
+      },
+      "definition": {
+        "en": ["central JSKOS server instance of coli-conc"],
+        "de": ["zentrale JSKOS-Server Instanz von coli-conc"]
+      },
+      "baseUrl": "//localhost:3000/",
+      "provider": "ConceptApi"
+    },
+    {
+      "uri": "http://coli-conc.gbv.de/registry/local-mappings",
+      "notation": ["L"],
+      "prefLabel": {
+        "de": "Lokal",
+        "en": "Local"
+      },
+      "mappings": "...",
+      "canSaveMappings": true,
+      "canRemoveMappings": true,
+      "provider": "LocalMappings",
+      "subject": [{
+        "uri": "http://coli-conc.gbv.de/registry-group/existing-mappings"
+      }],
+      "definition": {
+        "en": ["Mappings saved locally in the browser"],
+        "de": ["Mappings, die lokal im Browser gespeichert wurden"]
+      }
+    },
+    {
+      "uri": "http://coli-conc.gbv.de/registry/coli-conc-mappings",
+      "notation": ["C"],
+      "prefLabel": {
+        "de": "Konkordanz-Register",
+        "en": "Concordance Registry"
+      },
+      "definition": {
+        "en": ["Central concordance registry of coli-conc"],
+        "de": ["Zentrale Konkordanz-Datenbank von coli-conc"]
+      },
+      "mappings": "//localhost:3001/mappings/",
+      "annotations": "//localhost:3001/annotations/",
+      "auth": true,
+      "canSaveMappings": true,
+      "canRemoveMappings": true,
+      "provider": "MappingsApi",
+      "subject": [{
+        "uri": "http://coli-conc.gbv.de/registry-group/existing-mappings"
+      }]
+    },
+    {
+      "uri": "http://coli-conc.gbv.de/registry/coli-conc-recommendations",
+      "notation": ["CR"],
+      "prefLabel": {
+        "en": "coli-conc Recommendations",
+        "de": "coli-conc Vorschläge"
+      },
+      "provider": "SearchSuggestion",
+      "subject": [{
+        "uri": "http://coli-conc.gbv.de/registry-group/automatic-mappings"
+      }],
+      "searchUris": {
+        "http://coli-conc.gbv.de/registry/coli-conc-concepts": "//localhost:3000/search"
+      },
+      "excludedSchemes": [
+        {
+          "uri": "http://bartoc.org/en/node/1940"
+        },
+        {
+          "uri": "http://bartoc.org/en/node/430"
+        },
+        {
+          "uri": "http://nomisma.org/id/"
+        }
+      ]
+    },
+    {
+      "uri": "http://coli-conc.gbv.de/registry/ccmapper-mapping-recommendations",
+      "notation": ["CC"],
+      "prefLabel": {
+        "de": "ccmapper Mapping Recommendations",
+        "en": "ccmapper Mapping-Vorschläge"
+      },
+      "definition": {
+        "en": [""],
+        "de": [""]
+      },
+      "mappings": "//localhost:3002/mappings",
+      "provider": "MappingsApi",
+      "subject": [{
+        "uri": "http://coli-conc.gbv.de/registry-group/automatic-mappings"
+      }]
+    },
+    {
+      "uri": "http://coli-conc.gbv.de/registry/wikidata-reconciliation",
+      "notation": ["WR"],
+      "prefLabel": {
+        "de": "Wikidata-Reconciliation",
+        "en": "Wikidata Reconciliation"
+      },
+      "definition": {
+        "en": ["Wikidata Reconciliation API"],
+        "de": ["Wikidata-Reconciliation API"]
+      },
+      "mappings": "//localhost:3003/mappings",
+      "provider": "MappingsApi",
+      "subject": [{
+        "uri": "http://coli-conc.gbv.de/registry-group/automatic-mappings"
+      }],
+      "scheme": {
+        "uri": "http://bartoc.org/en/node/1940"
+      }
+    }
+  ],
+  "overrideRegistries": true,
+  "auth": false
+}
